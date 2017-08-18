@@ -7,6 +7,11 @@ output:
 ```{r}
 library(colt)
 ```
+## Colt - CLI color themes for R
+
+Colt provides a wrapper around crayon for themable cli elements. The motivation 
+behind this was that it is hard to create color styles that work well on dark 
+as well as light consoles.
 
 ## Using colt styles
 
@@ -27,22 +32,20 @@ fancy <- function(x) cat(
 ## Changing the Theme
 
 The acitive theme is stored in `options("colt.theme")`. It can easily be changed
-with `colt::set_theme()`.
+with `colt::set_theme()`. 
 
+### Readable theme for a light console
 ```{r eval = FALSE}
-
 colt::set_theme(colt_light)
 fancy()
-
 ```
-
 ![light theme](light.png)
 
-```{r eval = FALSE}
 
+### Readable theme for a dark console
+```{r eval = FALSE}
 colt::set_theme(colt_dark)
 fancy()
-
 ```
 
 ![dark theme](dark.png)
