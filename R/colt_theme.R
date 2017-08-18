@@ -1,18 +1,24 @@
 colt_theme <- function(
   default = identity,
   chr     = default,
+  chr_    = default,
   chr2    = chr,
+  chr2_   = chr,
   chr3    = chr,
-  chr4    = chr,
-  chr5    = chr,
-  chr6    = chr,
+  chr3_   = chr,
+
+  yes     = default,
+  no      = default,
+  na      = default,
+  null    = default,
+  inf     = default,
 
   num     = default,
+  num_    = num,
   num2    = num,
+  num2_   = num,
   num3    = num,
-  num4    = num,
-  num5    = num,
-  num6    = num,
+  num3_   = num,
 
   hdr     = default,
   hdr2    = default,
@@ -26,14 +32,13 @@ colt_theme <- function(
   chk3    = chk,
   radio   = default,
   radio2  = radio,
-  enum    = default,
 
-  info    = default,
-  trace   = info,
-  debug   = info,
-  warn    = info,
-  error   = info,
-  fatal   = info,
+  log_info    = default,
+  log_trace   = log_info,
+  log_debug   = log_info,
+  log_warn    = log_info,
+  log_error   = log_info,
+  log_fatal   = log_info,
 
   emph    = default,
   emph2   = emph
@@ -58,6 +63,7 @@ print.colt_theme <- function(x){
 
 
 
+#' @export
 set_theme <- function(x){
   stopifnot(inherits(x, "colt_theme"))
   options("colt.theme" = x)
