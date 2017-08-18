@@ -1,27 +1,49 @@
 colt_theme <- function(
   default = identity,
-  h1 = default,
-  h2 = default,
-  h3 = default,
-  chr1 = default,
-  chr2 = default,
-  chr3 = default,
-  num1 = default,
-  num2 = default,
-  num3 = default,
-  bullet = default,
-  enum = default,
-  trace = default,
-  debug = default,
-  info = default,
-  warn = default,
-  error = default,
-  fatal = default
+  chr     = default,
+  chr2    = chr,
+  chr3    = chr,
+  chr4    = chr,
+  chr5    = chr,
+  chr6    = chr,
+
+  num     = default,
+  num2    = num,
+  num3    = num,
+  num4    = num,
+  num5    = num,
+  num6    = num,
+
+  hdr     = default,
+  hdr2    = default,
+  hdr3    = default,
+
+  bullet  = default,
+  bullet2 = bullet,
+  bullet3 = bullet,
+  chk     = default,
+  chk2    = chk,
+  chk3    = chk,
+  radio   = default,
+  radio2  = radio,
+  enum    = default,
+
+  info    = default,
+  trace   = info,
+  debug   = info,
+  warn    = info,
+  error   = info,
+  fatal   = info,
+
+  emph    = default,
+  emph2   = emph
 ){
   res <- as.list(environment())
   class(res) <- c("colt_theme", "list")
   res
 }
+
+
 
 
 
@@ -32,4 +54,11 @@ print.colt_theme <- function(x){
   for(fun in names(x)){
     cat(sprintf(blindtext, fun, x[[fun]]("Lorem ipsum dolor sit amet"), sep = ""))
   }
+}
+
+
+
+set_theme <- function(x){
+  stopifnot(inherits(x, "colt_theme"))
+  options("colt.theme" = x)
 }
