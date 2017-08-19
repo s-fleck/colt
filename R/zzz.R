@@ -1,97 +1,75 @@
 #' @export
 colt_light <- colt_theme(
-  default = identity,
-  chr     = crayon::black,
-  chr_    = crayon::silver,
-  chr2    = crayon::make_style("#ff2222"),
-  chr2_   = crayon::make_style("#884444"),
-  chr3    = crayon::make_style("#228822"),
-  chr3_   = crayon::make_style("#66aa66"),
+  clt_default = identity,
+  clt_h1 = function(x) crayon::bold(crayon::cyan(x)),
+  clt_h2 = function(x) crayon::cyan(x),
 
-  yes     = crayon::green,
-  no      = crayon::red,
-  na      = crayon::yellow,
-  null    = crayon::magenta,
-  inf     = crayon::magenta,
+  clt_chr = crayon::black,
+  clt_chr_accent = crayon::blue,
+  clt_chr_subtle = crayon::silver,
 
-  num     = default,
-  num_    = default,
-  num2    = default,
-  num2_   = default,
-  num3    = default,
-  num3_   = default,
+  clt_true = crayon::green,
+  clt_false = crayon::red,
+  clt_maybe = crayon::yellow,
 
-  hdr     = function(x) crayon::underline(crayon::bold(crayon::cyan(x))),
-  hdr2    = function(x) crayon::underline(crayon::cyan(x)),
-  hdr3    = function(x) crayon::italic(crayon::cyan(x)),
+  clt_num = crayon::black,
+  clt_num_accent = crayon::blue,
+  clt_num_subtle = crayon::silver,
 
-  bullet  = function(x) paste(clisymbols::symbol$bullet, x),
-  bullet2 = function(x) paste(clisymbols::symbol$circle_double, x),
-  bullet3 = function(x) paste(clisymbols::symbol$square_small, x),
-  chk     = function(x) paste(crayon::green(clisymbols::symbol$tick), x),
-  chk2    = function(x) paste(crayon::red(clisymbols::symbol$cross), x),
-  chk3    = function(x) paste(crayon::silver(clisymbols::symbol$checkbox_off), x),
-  radio   = function(x) paste(clisymbols::symbol$radio_on,  x),
-  radio2  = function(x) paste(clisymbols::symbol$circle_dotted, x),
+  clt_bg = identity,
+  clt_bg_subtle = crayon::make_style(grDevices::grey(0.9), bg = TRUE, grey = TRUE),
+  clt_bg_accent = crayon::make_style("#F3F315", bg = TRUE),
 
-  # info    = default,
-  # trace   = info,
-  # debug   = info,
-  # warn    = info,
-  # error   = info,
-  # fatal   = info,
+  clt_na = crayon::magenta,
+  clt_nan = crayon::magenta,
+  clt_inf = crayon::magenta,
+  clt_null = crayon::magenta,
 
-  emph    = crayon::italic,
-  emph2   = crayon::bold
+  clt_info = identity,
+  clt_message = crayon::green,
+  clt_warning = crayon::yellow,
+  clt_error   = crayon::red,
+
+  clt_emph    = crayon::italic,
+  clt_emph2   = crayon::bold
 )
 
 
 
 #' @export
 colt_dark <- colt_theme(
-  default = identity,
-  chr     = crayon::white,
-  chr_    = crayon::silver,
-  chr2    = crayon::make_style("#ff2222"),
-  chr2_   = crayon::make_style("#884444"),
-  chr3    = crayon::make_style("#22ff22"),
-  chr3_   = crayon::make_style("#448844"),
+  clt_default = identity,
+  clt_h1 = function(x) crayon::bold(crayon::cyan(x)),
+  clt_h2 = function(x) crayon::cyan(x),
 
-  yes     = crayon::green,
-  no      = crayon::red,
-  na      = crayon::yellow,
-  null    = crayon::magenta,
-  inf     = crayon::magenta,
+  clt_chr = crayon::white,
+  clt_chr_accent = crayon::make_style("#77B5FE"),
+  clt_chr_subtle = crayon::silver,
 
-  num     = default,
-  num_    = default,
-  num2    = default,
-  num2_   = default,
-  num3    = default,
-  num3_   = default,
+  clt_true = crayon::green,
+  clt_false = crayon::red,
+  clt_maybe = crayon::yellow,
 
-  hdr     = function(x) crayon::underline(crayon::bold(crayon::cyan(x))),
-  hdr2    = function(x) crayon::underline(crayon::cyan(x)),
-  hdr3    = function(x) crayon::italic(crayon::cyan(x)),
+  clt_num = crayon::white,
+  clt_num_accent = crayon::blue,
+  clt_num_subtle = crayon::silver,
 
-  bullet  = function(x) paste(clisymbols::symbol$bullet, x),
-  bullet2 = function(x) paste(clisymbols::symbol$circle_double, x),
-  bullet3 = function(x) paste(clisymbols::symbol$square_small, x),
-  chk     = function(x) paste(crayon::green(clisymbols::symbol$tick), x),
-  chk2    = function(x) paste(crayon::red(clisymbols::symbol$cross), x),
-  chk3    = function(x) paste(crayon::silver(clisymbols::symbol$checkbox_off), x),
-  radio   = function(x) paste(clisymbols::symbol$radio_on,  x),
-  radio2  = function(x) paste(clisymbols::symbol$circle_dotted, x),
+  clt_bg = identity,
+  clt_bg_subtle = crayon::make_style(grDevices::grey(0.2), bg = TRUE, grey = TRUE),
+  clt_bg_accent = crayon::make_style("#AA381E", bg = TRUE),
 
-  # log_info    = default,
-  # log_trace   = info,
-  # log_debug   = info,
-  # log_warn    = info,
-  # log_error   = info,
-  # log_fatal   = info,
+  clt_na = crayon::magenta,
+  clt_nan = crayon::magenta,
+  clt_inf = crayon::magenta,
+  clt_null = crayon::magenta,
 
-  emph    = crayon::italic,
-  emph2   = crayon::bold
+  clt_info = identity,
+  clt_message = crayon::green,
+  clt_warning = crayon::yellow,
+  clt_error   = crayon::red,
+
+  clt_emph    = crayon::italic,
+  clt_emph2   = crayon::bold
 )
 
 
@@ -107,4 +85,3 @@ colt_dark <- colt_theme(
 
   invisible()
 }
-

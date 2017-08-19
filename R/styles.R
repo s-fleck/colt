@@ -3,223 +3,151 @@
 
 
 #' @export
-default <- function(x, fun = options("colt.theme")[[1]]$default){
+clt_default <- function(x, fun = options("colt.theme")[[1]]$clt_default){
   fun(x)
 }
 
 
 #' @export
-chr <- function(x, fun = options("colt.theme")[[1]]$chr){
+clt_h1 <- function(x, fun = options("colt.theme")[[1]]$clt_h1){
   fun(x)
 }
 
 
 #' @export
-chr_ <- function(x, fun = options("colt.theme")[[1]]$chr_){
+clt_h2 <- function(x, fun = options("colt.theme")[[1]]$clt_h2){
   fun(x)
 }
 
 
 #' @export
-chr2 <- function(x, fun = options("colt.theme")[[1]]$chr2){
+clt_chr <- function(x, fun = options("colt.theme")[[1]]$clt_chr){
   fun(x)
 }
 
 
 #' @export
-chr2_ <- function(x, fun = options("colt.theme")[[1]]$chr2_){
+clt_chr_accent <- function(x, fun = options("colt.theme")[[1]]$clt_chr_accent){
   fun(x)
 }
 
 
 #' @export
-chr3 <- function(x, fun = options("colt.theme")[[1]]$chr3){
+clt_chr_subtle <- function(x, fun = options("colt.theme")[[1]]$clt_chr_subtle){
   fun(x)
 }
 
 
 #' @export
-chr3_ <- function(x, fun = options("colt.theme")[[1]]$chr3_){
+clt_true <- function(x, fun = options("colt.theme")[[1]]$clt_true){
   fun(x)
 }
 
 
 #' @export
-yes <- function(x, fun = options("colt.theme")[[1]]$yes){
+clt_false <- function(x, fun = options("colt.theme")[[1]]$clt_false){
   fun(x)
 }
 
 
 #' @export
-no <- function(x, fun = options("colt.theme")[[1]]$no){
+clt_maybe <- function(x, fun = options("colt.theme")[[1]]$clt_maybe){
   fun(x)
 }
 
 
 #' @export
-na <- function(x, fun = options("colt.theme")[[1]]$na){
+clt_num <- function(x, fun = options("colt.theme")[[1]]$clt_num){
   fun(x)
 }
 
 
 #' @export
-null <- function(x, fun = options("colt.theme")[[1]]$null){
+clt_num_accent <- function(x, fun = options("colt.theme")[[1]]$clt_num_accent){
   fun(x)
 }
 
 
 #' @export
-inf <- function(x, fun = options("colt.theme")[[1]]$inf){
+clt_num_subtle <- function(x, fun = options("colt.theme")[[1]]$clt_num_subtle){
   fun(x)
 }
 
 
 #' @export
-num <- function(x, fun = options("colt.theme")[[1]]$num){
+clt_bg <- function(x, fun = options("colt.theme")[[1]]$clt_bg){
   fun(x)
 }
 
 
 #' @export
-num_ <- function(x, fun = options("colt.theme")[[1]]$num_){
+clt_bg_subtle <- function(x, fun = options("colt.theme")[[1]]$clt_bg_subtle){
   fun(x)
 }
 
 
 #' @export
-num2 <- function(x, fun = options("colt.theme")[[1]]$num2){
+clt_bg_accent <- function(x, fun = options("colt.theme")[[1]]$clt_bg_accent){
   fun(x)
 }
 
 
 #' @export
-num2_ <- function(x, fun = options("colt.theme")[[1]]$num2_){
+clt_na <- function(x, fun = options("colt.theme")[[1]]$clt_na){
   fun(x)
 }
 
 
 #' @export
-num3 <- function(x, fun = options("colt.theme")[[1]]$num3){
+clt_nan <- function(x, fun = options("colt.theme")[[1]]$clt_nan){
   fun(x)
 }
 
 
 #' @export
-num3_ <- function(x, fun = options("colt.theme")[[1]]$num3_){
+clt_inf <- function(x, fun = options("colt.theme")[[1]]$clt_inf){
   fun(x)
 }
 
 
 #' @export
-hdr <- function(x, fun = options("colt.theme")[[1]]$hdr){
+clt_null <- function(x, fun = options("colt.theme")[[1]]$clt_null){
   fun(x)
 }
 
 
 #' @export
-hdr2 <- function(x, fun = options("colt.theme")[[1]]$hdr2){
+clt_info <- function(x, fun = options("colt.theme")[[1]]$clt_info){
   fun(x)
 }
 
 
 #' @export
-hdr3 <- function(x, fun = options("colt.theme")[[1]]$hdr3){
+clt_message <- function(x, fun = options("colt.theme")[[1]]$clt_message){
   fun(x)
 }
 
 
 #' @export
-bullet <- function(x, fun = options("colt.theme")[[1]]$bullet){
+clt_warning <- function(x, fun = options("colt.theme")[[1]]$clt_warning){
   fun(x)
 }
 
 
 #' @export
-bullet2 <- function(x, fun = options("colt.theme")[[1]]$bullet2){
+clt_error <- function(x, fun = options("colt.theme")[[1]]$clt_error){
   fun(x)
 }
 
 
 #' @export
-bullet3 <- function(x, fun = options("colt.theme")[[1]]$bullet3){
+clt_emph <- function(x, fun = options("colt.theme")[[1]]$clt_emph){
   fun(x)
 }
 
 
 #' @export
-chk <- function(x, fun = options("colt.theme")[[1]]$chk){
-  fun(x)
-}
-
-
-#' @export
-chk2 <- function(x, fun = options("colt.theme")[[1]]$chk2){
-  fun(x)
-}
-
-
-#' @export
-chk3 <- function(x, fun = options("colt.theme")[[1]]$chk3){
-  fun(x)
-}
-
-
-#' @export
-radio <- function(x, fun = options("colt.theme")[[1]]$radio){
-  fun(x)
-}
-
-
-#' @export
-radio2 <- function(x, fun = options("colt.theme")[[1]]$radio2){
-  fun(x)
-}
-
-
-#' @export
-log_info <- function(x, fun = options("colt.theme")[[1]]$log_info){
-  fun(x)
-}
-
-
-#' @export
-log_trace <- function(x, fun = options("colt.theme")[[1]]$log_trace){
-  fun(x)
-}
-
-
-#' @export
-log_debug <- function(x, fun = options("colt.theme")[[1]]$log_debug){
-  fun(x)
-}
-
-
-#' @export
-log_warn <- function(x, fun = options("colt.theme")[[1]]$log_warn){
-  fun(x)
-}
-
-
-#' @export
-log_error <- function(x, fun = options("colt.theme")[[1]]$log_error){
-  fun(x)
-}
-
-
-#' @export
-log_fatal <- function(x, fun = options("colt.theme")[[1]]$log_fatal){
-  fun(x)
-}
-
-
-#' @export
-emph <- function(x, fun = options("colt.theme")[[1]]$emph){
-  fun(x)
-}
-
-
-#' @export
-emph2 <- function(x, fun = options("colt.theme")[[1]]$emph2){
+clt_emph2 <- function(x, fun = options("colt.theme")[[1]]$clt_emph2){
   fun(x)
 }
 

@@ -1,47 +1,36 @@
 colt_theme <- function(
-  default = identity,
-  chr     = default,
-  chr_    = default,
-  chr2    = chr,
-  chr2_   = chr,
-  chr3    = chr,
-  chr3_   = chr,
+  clt_default = identity,
+  clt_h1 = clt_default,
+  clt_h2 = clt_default,
 
-  yes     = default,
-  no      = default,
-  na      = default,
-  null    = default,
-  inf     = default,
+  clt_chr = clt_default,
+  clt_chr_accent = clt_default,
+  clt_chr_subtle = clt_default,
 
-  num     = default,
-  num_    = num,
-  num2    = num,
-  num2_   = num,
-  num3    = num,
-  num3_   = num,
+  clt_true = clt_default,
+  clt_false = clt_default,
+  clt_maybe = clt_default,
 
-  hdr     = default,
-  hdr2    = default,
-  hdr3    = default,
+  clt_num = clt_default,
+  clt_num_accent = clt_default,
+  clt_num_subtle = clt_default,
 
-  bullet  = default,
-  bullet2 = bullet,
-  bullet3 = bullet,
-  chk     = default,
-  chk2    = chk,
-  chk3    = chk,
-  radio   = default,
-  radio2  = radio,
+  clt_bg = clt_default,
+  clt_bg_subtle = clt_default,
+  clt_bg_accent = clt_default,
 
-  log_info    = default,
-  log_trace   = log_info,
-  log_debug   = log_info,
-  log_warn    = log_info,
-  log_error   = log_info,
-  log_fatal   = log_info,
+  clt_na = clt_default,
+  clt_nan = clt_default,
+  clt_inf = clt_default,
+  clt_null = clt_default,
 
-  emph    = default,
-  emph2   = emph
+  clt_info = clt_default,
+  clt_message = clt_default,
+  clt_warning = clt_default,
+  clt_error = clt_default,
+
+  clt_emph    = clt_default,
+  clt_emph2   = clt_default
 ){
   res <- as.list(environment())
   class(res) <- c("colt_theme", "list")
