@@ -73,15 +73,17 @@ colt_dark <- colt_theme(
 )
 
 
+
+
 .onLoad <- function(...) {
   op <- options()
 
-  op.testthis <- list(
-    colt.theme = colt_dark
+  op.default <- list(
+    colt.theme = colt_light
   )
 
-  toset <- !(names(op.testthis) %in% names(op))
-  if(any(toset)) options(op.testthis[toset])
+  toset <- !(names(op.default) %in% names(op))
+  if(any(toset)) options(op.default[toset])
 
   invisible()
 }
