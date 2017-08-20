@@ -1,3 +1,4 @@
+#' @export
 colt_theme <- function(
   clt_default = identity,
   clt_h1 = clt_default,
@@ -40,7 +41,7 @@ colt_theme <- function(
 
 
 
-
+#' @export
 print.colt_theme <- function(x){
   npad <- max(nchar(names(x))) + 1
   blindtext <- paste0("%", npad, "s:  %s\n")
