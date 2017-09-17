@@ -35,7 +35,7 @@ with `colt::set_theme()`.
 
 ### Readable theme for a light console
 ```{r eval = FALSE}
-colt::set_theme(colt_light)
+colt::set_theme(colt::clt_theme_light)
 fancy()
 ```
 ![light theme](light.png)
@@ -43,7 +43,7 @@ fancy()
 
 ### Readable theme for a dark console
 ```{r eval = FALSE}
-colt::set_theme(colt_dark)
+colt::set_theme(colt::clt_theme_dark)
 fancy()
 ```
 

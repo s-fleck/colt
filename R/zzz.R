@@ -1,5 +1,5 @@
 #' @export
-colt_light <- colt_theme(
+clt_theme_light <- colt_theme(
   clt_default = identity,
   clt_h1 = function(x) crayon::bold(crayon::cyan(x)),
   clt_h2 = function(x) crayon::cyan(x),
@@ -37,13 +37,13 @@ colt_light <- colt_theme(
 
 
 #' @export
-colt_dark <- colt_theme(
+clt_theme_dark <- colt_theme(
   clt_default = identity,
-  clt_h1 = function(x) crayon::bold(crayon::cyan(x)),
-  clt_h2 = function(x) crayon::cyan(x),
+  clt_h1 = crayon::bold,
+  clt_h2 = crayon::italic,
 
   clt_chr = crayon::white,
-  clt_chr_accent = crayon::make_style("#77B5FE"),
+  clt_chr_accent = crayon::make_style("#7CB9E8", colors = 256),
   clt_chr_subtle = crayon::silver,
 
   clt_true = crayon::green,
@@ -55,8 +55,8 @@ colt_dark <- colt_theme(
   clt_num_subtle = crayon::silver,
 
   clt_bg = identity,
-  clt_bg_subtle = crayon::make_style(grDevices::grey(0.2), bg = TRUE, grey = TRUE),
-  clt_bg_accent = crayon::make_style("#AA381E", bg = TRUE),
+  clt_bg_subtle = crayon::make_style("#333333", bg = TRUE, grey = TRUE, colors = 256),
+  clt_bg_accent = crayon::make_style("#3B3B6D", bg = TRUE, colors = 256),
 
   clt_na = crayon::magenta,
   clt_nan = crayon::magenta,
@@ -69,9 +69,47 @@ colt_dark <- colt_theme(
   clt_error   = crayon::red,
 
   clt_emph    = crayon::italic,
-  clt_emph2   = crayon::bold
+  clt_emph2   = crayon::bold,
+  .colors = 256
 )
 
+
+
+clt_theme_dark_8 <- colt_theme(
+  clt_default = identity,
+  clt_h1 = function(x) crayon::bold,
+  clt_h2 = function(x) crayon::cyan(x),
+
+  clt_chr = crayon::white,
+  clt_chr_accent = crayon::cyan,
+  clt_chr_subtle = crayon::silver,
+
+  clt_true = crayon::green,
+  clt_false = crayon::red,
+  clt_maybe = crayon::yellow,
+
+  clt_num = crayon::white,
+  clt_num_accent = crayon::blue,
+  clt_num_subtle = crayon::silver,
+
+  clt_bg = identity,
+  clt_bg_subtle = crayon::make_style(grDevices::grey(0.2), bg = TRUE, grey = TRUE),
+  clt_bg_accent = crayon::bgMagenta,
+
+  clt_na = crayon::magenta,
+  clt_nan = crayon::magenta,
+  clt_inf = crayon::magenta,
+  clt_null = crayon::magenta,
+
+  clt_info = identity,
+  clt_message = crayon::green,
+  clt_warning = crayon::yellow,
+  clt_error   = crayon::red,
+
+  clt_emph    = crayon::italic,
+  clt_emph2   = crayon::bold,
+  .colors = 8
+)
 
 
 
@@ -79,7 +117,7 @@ colt_dark <- colt_theme(
   op <- options()
 
   op.default <- list(
-    colt.theme = colt_light
+    colt.theme = clt_theme_light
   )
 
   toset <- !(names(op.default) %in% names(op))
