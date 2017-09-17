@@ -1,6 +1,6 @@
 Package: colt
 Type: Package
-Title: Commandline color themes
+Title: Commandline Color Themes
 Version: 0.0.1.9002
 Authors@R: person("Stefan", "Fleck", email = "stefan.b.fleck@gmail.com", role = c("aut", "cre"))
 Maintainer: Stefan Fleck <stefan.b.fleck@gmail.com>
