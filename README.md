@@ -1,20 +1,41 @@
-``` r
-library(colt)
-```
 
 Colt - CLI color themes for R
------------------------------
+=============================
 
-Colt provides a wrapper around crayon for themable cli elements. The motivation behind this was that it is hard to create color styles that work well on dark as well as light consoles.
+Colt is aimed at package developers that want to create themeable command line output. It is a simple wrapper around the crayon package.
 
-Using colt styles
------------------
+Installation
+------------
+
+``` r
+install.packages("colt")
+```
+
+Usage
+-----
+
+### Creating a Theme
+
+A colt theme is created with the `colt_theme()` constructor. A colt theme is just a list of functions that get applied to the text. A print method exists for previewing themes. Colt styles are named semantically rather than directly with a color (e.g. "yes" instead of "green").
+
+### Theme Elements
+
+``` r
+print(clt_theme_light)
+```
+
+![](README-preview.png)
+
+### Setting themes
+
+The acitive theme is stored in `options("colt.theme")`. It can easily be changed with `colt::set_theme()`. Colt comes with two default themes, `colt_theme_light` and `colt_theme_dark`.
 
 ``` r
 fancy <- function(x) {cat(
   colt::clt_h1("Fancy text themes\n"),
-  colt::clt_chr_subtle("provided by the colt package\n\n"),
-  colt::clt_chr("By specifying a few"), clt_chr_accent("design elements"), clt_chr("it is easy to assign new themes to cli text\n"),
+  colt::clt_h2("provided by the colt package\n\n"),
+  colt::clt_chr("By specifying a few"), clt_chr_accent("design elements"), 
+  clt_chr("it is easy to assign new themes to cli text\n"),
   colt::clt_chr("Do you agree?\n\n"),
   colt::clt_true("I agree\n"),
   colt::clt_false("I don't agree\n"),
@@ -23,38 +44,22 @@ fancy <- function(x) {cat(
 )}
 ```
 
-Changing the Theme
-------------------
-
-The acitive theme is stored in `options("colt.theme")`. It can easily be changed with `colt::set_theme()`.
-
-### Readable theme for a light console
+#### `colt_theme_light`
 
 ``` r
-colt::set_theme(colt_light)
+colt::set_theme(colt::clt_theme_light)
 fancy()
 ```
 
-![light theme](light.png)
+![](README-light.png)
 
-### Readable theme for a dark console
+#### `colt_theme_dark`
 
 ``` r
-colt::set_theme(colt_dark)
+colt::set_theme(colt::clt_theme_dark)
 fancy()
 ```
 
-![dark theme](dark.png)
+![](README-dark.png)
 
-Theme element names (subject to change)
----------------------------------------
-
-A colt theme is created with the `colt_theme()` constructor. It is just a list of functions that get applied to the text. A print method exists for previewing. Colt styles are named semantically rather than directly with a color (e.g. "yes" instead of "green").
-
-``` r
-names(colt_light)
-cat("\n\n")
-print(colt_light)
-```
-
-![preview](preview.png)
+You can use `colt::set_theme(colt::colt_theme())` to set an empty theme (= switch off colors).

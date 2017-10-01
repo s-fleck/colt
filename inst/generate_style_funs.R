@@ -6,6 +6,7 @@ x <- colt_theme()
 
 funs <- glue::glue('
     #\' @export
+    #\' @rdname colt_styles
     {name} <- function(x, fun = options("colt.theme")[[1]]${name}){{
       fun(x)
     }}
@@ -15,7 +16,20 @@ funs <- glue::glue('
   , name = names(x)
 )
 
-funs <- c("# This file is generated automatically by inst/generate_style_funs.R.\n# Do not edit manually.\n\n", funs)
+funs <- c(
+  glue::glue("
+    # This file is generated automatically by inst/generate_style_funs.R.
+    # Do not edit manually.
+
+    #' Colt style elements
+    #'
+    #' @name colt_styles
+    #' @param x a character vector
+    #' @param fun a styling function
+    #'
+  "),
+  funs
+)
 
 writeLines(
   funs,

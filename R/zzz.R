@@ -1,3 +1,6 @@
+# Make data available
+data(clt_theme_light, clt_theme_dark, envir=environment())
+
 .onLoad <- function(...) {
   op <- options()
 
