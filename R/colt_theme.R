@@ -35,7 +35,6 @@
 #' @return `colt_theme()` creates a new colt_theme Object.
 #'
 #' @examples
-#' \dontrun{
 #' mytheme <- colt_theme(
 #'   clt_h1 = crayon::combine_styles(crayon::red, crayon::bold)
 #' )
@@ -49,7 +48,6 @@
 #'
 #' set_theme(clt_theme_light)
 #' cat(clt_h1("Important"))
-#'}
 #'
 #' @export
 colt_theme <- function(
