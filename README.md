@@ -24,7 +24,7 @@ A colt theme is created with the `colt_theme()` constructor. A colt theme is jus
 print(clt_theme_light)
 ```
 
-![](README-preview.png)
+![](inst/images/README-preview.png)
 
 ### Setting themes
 
@@ -51,7 +51,7 @@ colt::set_theme(colt::clt_theme_light)
 fancy()
 ```
 
-![](README-light.png)
+![](inst/images/README-light.png)
 
 #### `colt_theme_dark`
 
@@ -60,6 +60,6 @@ colt::set_theme(colt::clt_theme_dark)
 fancy()
 ```
 
-![](README-dark.png)
+![](inst/images/README-dark.png)
 
 You can use `colt::set_theme(colt::colt_theme())` to set an empty theme (= switch off colors).
