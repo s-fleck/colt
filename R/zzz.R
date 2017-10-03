@@ -41,7 +41,7 @@ data(clt_theme_light, clt_theme_dark, envir=environment())
 
 
 is_console_dark <- function(){
-  if (requireNamespace("rstudioapi")){
+  if (requireNamespace("rstudioapi", quietly = TRUE)){
     use_dark_theme <- tryCatch(
       rstudioapi::getThemeInfo()[["dark"]],
       error = function(e) NA,
