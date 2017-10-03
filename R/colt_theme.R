@@ -137,7 +137,8 @@ print.colt_theme <- function(x, ...){
 
 
 
-#' @param x A `colt_theme` Object. If `x` is missing, colors will be switched
+
+#' @param x A `colt_theme` Object. If `x` is `NULL`, colors will be switched
 #' off
 #'
 #' @export
@@ -145,8 +146,12 @@ print.colt_theme <- function(x, ...){
 #' @rdname colt_theme
 #'
 set_theme <- function(x){
-  if(missing(x)) set_theme(colt_theme())
-  stopifnot(inherits(x, "colt_theme"))
-  options("colt.theme" = x)
+  if(is.null(x)) {
+    set_theme(colt_theme())
+  } else {
+    stopifnot(inherits(x, "colt_theme"))
+    options("colt.theme" = x)
+  }
+
   invisible(x)
 }
