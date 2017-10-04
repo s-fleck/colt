@@ -4,19 +4,20 @@
 
 ## R CMD check results
 
-0 errors | 0 warnings | 1 note
-
-* This is a new release.
+0 errors | 0 warnings | 0 notes
 
 ## Reverse dependencies
 
-This is a new release, so there are no reverse dependencies.
+The only reverse dependency is 'tatoo', a package that I am also the author of
+and that I have tested extensively with 'colt'.
 
-## Resubmission
+## Comment
 
-This is a resubmission. In this version I have:
+CRAN package check results give me 
+"Namespace in Imports field not imported from: ‘crayon’"
 
-* Single quoted package names in Description
-* Removed \dontrun{} from short code examples
+I do not *call* any crayon functions, but crayon functions are the default
+values for some arguments of the functions in this package as well as the
+color themes supplied with this package (a colt_theme is a list of functions).
 
 ---
