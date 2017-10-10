@@ -13,6 +13,9 @@ and that I have tested extensively with 'colt'.
 
 ## Comment
 
+The last release was pretty recent, but this version incorporates an important
+feature of the new RStudio version released today.
+
 CRAN package check results give me 
 "Namespace in Imports field not imported from: ‘crayon’"
 
