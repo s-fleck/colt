@@ -67,8 +67,8 @@ clt_theme_dark <- colt_theme(
 
   clt_info = identity,
   clt_message = crayon::green,
-  clt_warning = crayon::yellow,
-  clt_error   = crayon::red,
+  clt_warning = crayon::make_style("#FFFF00", colors = 256),
+  clt_error   = crayon::make_style("#E52B50", colors = 256),
 
   clt_emph    = crayon::italic,
   clt_emph2   = crayon::bold
