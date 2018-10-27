@@ -28,7 +28,7 @@ clt_theme_light <- colt_theme(
 
   clt_info = identity,
   clt_message = crayon::green,
-  clt_warning = crayon::yellow,
+  clt_warning = crayon::make_style("#AA5522", colors = 256),
   clt_error   = crayon::red,
 
   clt_emph    = crayon::italic,
@@ -67,15 +67,15 @@ clt_theme_dark <- colt_theme(
 
   clt_info = identity,
   clt_message = crayon::green,
-  clt_warning = crayon::make_style("#FFFF00", colors = 256),
-  clt_error   = crayon::make_style("#E52B50", colors = 256),
+  clt_warning = crayon::make_style("#EEBB50", colors = 256),
+  clt_error   = crayon::make_style("#BB3333", colors = 256),
 
   clt_emph    = crayon::italic,
   clt_emph2   = crayon::bold
 )
 
 
-
+print(clt_theme_light)
 
 devtools::use_data(clt_theme_light, overwrite = TRUE)
 devtools::use_data(clt_theme_dark, overwrite = TRUE)
